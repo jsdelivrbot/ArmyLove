@@ -146,7 +146,12 @@ function Update(){
         effectTime += 0.03;
         if (effectTime < 1) findChildGetById("catch").Render();
     }
-    if(gameOver) findChildGetById("gameover").Render();
+    if(gameOver){
+        findChildGetById("gameover").Render();
+        Context.font="30px Gullim";
+        Context.fillStyle="#fff";
+        Context.fillText("비누력 : "+score,450,700);
+    }
 }
 function Input(e){
     var code;
